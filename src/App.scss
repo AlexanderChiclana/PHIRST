@@ -38,7 +38,6 @@ $medium-font: 25px;
 .left-triangle{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 55%);
   height: 690px;
-  // width: 730px;
   width: 35%;
   display: flex;
   justify-content: flex-end;
@@ -49,7 +48,6 @@ $medium-font: 25px;
   margin-top: 100px;
   position: relative;
   left: 40px;
-  // height: 470px;
   height: 65%;
 }
 
@@ -58,8 +56,6 @@ $medium-font: 25px;
   clip-path: polygon(0 0, 0% 100%, 100% 0);
   padding-right: 200px;
   height: 690px;
-  // width: 1186px;
-  // width: 65%;
   flex-grow: 1;
   background-color: $primary-color;
 }
@@ -143,6 +139,8 @@ $medium-font: 25px;
       }
       .right-triangle{
         position: absolute;
+        clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 100%);
+        width: 100%;
         padding-right: 0px; 
       }
       .left-triangle{
@@ -171,7 +169,7 @@ $medium-font: 25px;
     @media (max-width : 480px) {
       .banner{
         height: 100px;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         font-size: 75px;
         padding-right: 0px;
@@ -190,18 +188,19 @@ $medium-font: 25px;
         justify-content: flex-start;
       }
       .hero-navigation{
-        margin-top: 25px;
+        margin-top: 35px;
         float: right;
         text-align: end;
       }
       .slogan{
         text-align: end;
-        font-size: 25px;
+        font-size: 20px;
       }
       .divider{
         float: right;
-        height: 3px;
+        height: 1px;
         width: calc(100% - 60px);
+        opacity: .5;
         position: absolute;
       }
      
