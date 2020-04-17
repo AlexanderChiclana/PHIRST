@@ -1,16 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 
 $primary-color: #2D4059;
+$primary-dark-accent: #0B1D35;
 $secondary-color: #FFB401;
 $light-color: #F6F6F6;
 $bright-color: #D81D1F;
 
 $heading-font: oswald; 
-$secondary-font: 'Muli', sans-serif;
-
+// $secondary-font: 'Merriweather', sans-serif;
+$secondary-font: 'Muli';
 $large-font: 30px;
 $medium-font: 25px;
 
+
+// base styles
+
+body{
+  background-color: $light-color !important;
+}
+
+h1{
+  font-family: $heading-font;
+  // font-weight: 100 !important;
+  // letter-spacing: .05em;
+  font-size: 40px;
+}
+
+p{
+  font-family: $secondary-font
+}
+
+// hero
+
+.hero{
+  margin-bottom: 55px;
+}
 
 .banner{
   position: relative;
@@ -67,7 +92,7 @@ $medium-font: 25px;
   padding-right: 30px;
   font-weight: 100;
   font-family: $secondary-font;
-  font-size: $large-font;
+  font-size: $medium-font;
   color: $light-color;
 }
 
@@ -85,12 +110,163 @@ $medium-font: 25px;
   margin-top: 50px;
   font-family: $heading-font;
   font-size: $medium-font;
+  font-weight: 100;
   color: $light-color;
   padding: 0px 30px;
 }
 
 .hero-navigation li{
   padding-bottom: 20px;
+}
+
+// navbar
+
+.navigation-bar{
+  height: 120px;
+  width: 100%;
+  background-color:$light-color;
+  position: fixed;
+  z-index: 100;
+  // top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $heading-font;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+
+.navigation-routes{
+  display: flex;
+}
+
+.navigation-routes .route{
+  padding: 0px 30px;
+  font-size: $medium-font;
+
+}
+
+// icon 
+
+.bar{
+  width: 245px;
+  height: 45px;
+  background-color: $bright-color;
+  display: flex;
+  align-items: self;
+  justify-content: flex-end; 
+  font-size: 38px;
+  color: $light-color;
+}
+// section styles
+
+section{
+  width: 100%;
+}
+
+.angled-top{
+  clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+}
+
+.icon-section{
+  height:800px;
+  background-color: $primary-color;
+}
+
+.curved-bottom{
+  border-radius: 0px 0px 15vw 0px;
+}
+
+
+
+.initiatives-section{
+  height: 800px;
+  background-color: $secondary-color;
+}
+
+.community-section{
+  z-index: 5;
+  height: 800px;
+  width: 100vw;
+  background-color: $secondary-color;
+}
+
+.white-fill{
+  border-radius: 15vw 0px 0px 0px;
+  height: 100%;
+  width: 100%;
+  background-color: $light-color;
+  z-index: 1;
+}
+
+.light{
+  background: $light-color;
+}
+
+.half-split .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.half-split{
+  display: flex;
+  align-items: center;
+}
+
+section .circle{
+  display: block;
+  
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+}
+
+section .container .text-block{
+  width: 50%;
+  padding-right: 50px;
+}
+
+.text-block p{
+  line-height: 38px;
+  font-size: 18px;
+  margin: 45px 0px;
+}
+
+.link-arrow{
+  float: right;
+  font-family: $heading-font;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+// footer
+
+footer{
+  background-color: $primary-color;
+  width: 100%;
+  height: 515px;
+  display: flex;
+  text-align: center;
+  margin-bottom: -1px;
+  justify-content: center;
+  color: $light-color;
+  clip-path: polygon(0 0, 50% 25%, 100% 0, 100% 100%, 0 100%);
+  border: none;
+}
+
+.base{
+  width: 100%;
+  border: none;
+  color: $light-color;
+  font-family: $heading-font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 100;
+  height: 85px;
+  z-index: 10;
+  background-color: $primary-dark-accent;
 }
 
 
@@ -113,7 +289,10 @@ $medium-font: 25px;
 
     /* Medium Devices, Desktops */
     @media (min-width : 992px) {
-
+      // nav responsive
+      #menuToggle{
+        display: none;
+      }
     }
 
     /* Large Devices, Wide Screens */
@@ -125,6 +304,8 @@ $medium-font: 25px;
 
     /* Large Devices, Wide Screens */
     @media (max-width : 1200px) {
+      // hero
+    
       .left-triangle img{
         position: relative;
         left: 40px;
@@ -134,6 +315,22 @@ $medium-font: 25px;
 
     /* Medium Devices, Desktops */
     @media (max-width : 992px) {
+      //nav responsive
+      
+      .navigation-bar{
+        height: 120px;
+      }
+
+      .navigation-routes{
+        display: none;
+      }
+    
+
+      // hero
+      .hero{
+        margin-bottom: -100px;
+      }
+
       .hero-diamond{
         flex-direction: column-reverse;
       }
@@ -162,11 +359,16 @@ $medium-font: 25px;
 
     /* Small Devices, Tablets */
     @media (max-width : 768px) {
-
+ 
     }
 
     /* Extra Small Devices, Phones */ 
     @media (max-width : 480px) {
+      // nav
+      .navigation-bar{
+        height: 100px;
+      }
+      //hero
       .banner{
         height: 100px;
         justify-content: flex-end;
@@ -176,7 +378,6 @@ $medium-font: 25px;
         margin-top: 0px;
       }
       .right-triangle{
-        // clip-path: polygon(0 0, 100% 0, 100% 40%, 0% 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
 
       }
@@ -203,7 +404,12 @@ $medium-font: 25px;
         opacity: .5;
         position: absolute;
       }
-     
+
+      // sections
+      .angled-top{
+        clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+      }
+      
     }
 
     /* Custom, iPhone Retina */ 

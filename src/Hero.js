@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Hero extends Component {
     render() {
         return (
-            <div>
+            <div className='hero'>
                 <div className='banner container'>
                 PHIRST
                 </div>
@@ -11,6 +11,7 @@ class Hero extends Component {
                     <div className='left-triangle'>
                         <img alt='map of phillipines' src={require('./images/philipine black.png')}></img>
                     </div>
+                    
                     <div className='right-triangle'>
                         <div className='slogan'>
                         Philippine health initiative research service and training
