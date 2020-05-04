@@ -18,9 +18,9 @@ class Hero extends Component {
                         </div>
                         <div className='divider'></div>
                         <ul className='hero-navigation'>
-                            <li>about</li>
+                            <li>our mission</li>
+                            <li>opportunities</li>
                             <li>initiatives</li>
-                            <li>community</li>
                             <li>research</li>
                             <li>contact</li>
                         </ul>

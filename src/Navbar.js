@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import  {Link, useLocation } from 'react-router-dom'
 import Logo from './Logo.js'
 import Hamburger from './Hamburger.js'
 
@@ -8,7 +9,8 @@ class Navbar extends Component {
     
         this.state = {
           prevScrollpos: window.pageYOffset,
-          visible: false
+          downPage: true,
+          visible: true
         }
         this.showRef = React.createRef()
       }
@@ -27,14 +29,19 @@ class Navbar extends Component {
     const { prevScrollpos } = this.state
 
     const currentScrollPos = window.pageYOffset
+    
 
-    // const visible = prevScrollpos > currentScrollPos && currentScrollPos > 150
-    const visible = currentScrollPos > 500
-
+    const visible = prevScrollpos > currentScrollPos || currentScrollPos < 500
+    // const visible = currentScrollPos > 500
+    // const downPage = currentScrollPos > 550
+    const topPage = currentScrollPos < 10
+    const downPage = true
 
     this.setState({
       prevScrollpos: currentScrollPos,
-      visible
+      topPage: topPage,
+      visible: visible,
+      downPage: downPage
     })
   }
 
@@ -44,17 +51,21 @@ class Navbar extends Component {
       className="navigation-bar"
       style={{
         top: this.state.visible ? '0px' : '-140px',
-        transition: 'top 300ms'
+        transition: 'top 300ms',
+        boxShadow: this.state.topPage ? 'none' : '0 2px 4px -1px rgba(0,0,0,0.2)'
+
       }}  
       >
-        <div><Logo /></div>
+         <div style={{opacity: this.state.downPage ? 1 : 0, transition: 'opacity 1s' }}>
+           <Link to={'/'}><Logo /></Link>
+         </div>
+        
         <div className='navigation-routes'>
-
-          <div className='route'>about</div>
-          <div className='route'>initiatives</div>
-          <div className='route'>community</div>
-          <div className='route'>research</div>
-          <div className='route'>contact</div>
+        <Link to={'/team'}><div className='route'>team</div></Link>
+          <Link to={'/service'}><div className='route'>service</div></Link>
+           <Link to={'/training'}><div className='route'>training</div></Link>
+           <Link to={'/research'}><div className='route'>research</div></Link>
+           <Link to={'/contact'}><div className='route'>contact</div></Link>
 
         </div>
         <Hamburger />

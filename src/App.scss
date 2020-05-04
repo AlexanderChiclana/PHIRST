@@ -6,6 +6,7 @@ $primary-dark-accent: #0B1D35;
 $secondary-color: #FFB401;
 $light-color: #F6F6F6;
 $bright-color: #D81D1F;
+$black-secondary: #343434;
 
 $heading-font: oswald; 
 // $secondary-font: 'Merriweather', sans-serif;
@@ -13,7 +14,7 @@ $secondary-font: 'Muli';
 $large-font: 30px;
 $medium-font: 25px;
 
-
+$navbar-height: 120px;
 // base styles
 
 body{
@@ -27,10 +28,22 @@ h1{
   font-size: 40px;
 }
 
+.light-font{
+  color: $light-color;
+}
+
 p{
   font-family: $secondary-font
 }
 
+a { 
+  color: inherit !important; 
+  text-decoration: none !important;
+} 
+
+.medium-spacing{
+  line-height: 38px;
+}
 // hero
 
 .hero{
@@ -121,8 +134,13 @@ p{
 
 // navbar
 
+.navbar-buffer{
+  height: $navbar-height;
+  width: 100%;
+}
+
 .navigation-bar{
-  height: 120px;
+  height: $navbar-height;
   width: 100%;
   background-color:$light-color;
   position: fixed;
@@ -163,13 +181,30 @@ section{
   width: 100%;
 }
 
+.mission{
+  min-height: 930px;
+  background-color: $secondary-color;
+  margin-bottom: -100px;
+}
+
 .angled-top{
   clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
 }
 
 .icon-section{
-  height:800px;
-  background-color: $primary-color;
+  // height:1760px;
+  background-color: #4E4E49;
+}
+
+.icon-section .container{
+  padding-top: 250px;
+  padding-bottom: 150px;
+}
+
+.icon-row{
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .curved-bottom{
@@ -179,7 +214,7 @@ section{
 
 
 .initiatives-section{
-  height: 800px;
+  min-height: 800px;
   background-color: $secondary-color;
 }
 
@@ -222,9 +257,36 @@ section .circle{
   border-radius: 50%;
 }
 
+.circle-small{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: $secondary-color;
+}
+
+// .circle-medium{
+//   height: 100%;
+//   width: 100%;
+//   border-radius: 50%;
+//   background-color: $secondary-color;
+// }
+
+
+.icon-container{
+  min-width: 33%;
+}
+
 section .container .text-block{
   width: 50%;
-  padding-right: 50px;
+  // padding-right: 50px
+}
+
+.text-container{
+  width: 66%;
+}
+
+.text-container h1{
+  margin-bottom: 30px;
 }
 
 .text-block p{
@@ -240,20 +302,110 @@ section .container .text-block{
   font-weight: 300;
 }
 
+.white-body{
+  position: relative;
+  background-color: $light-color;
+  min-height: 1000px;
+  border-radius: 200px;
+}
+
+// team-page
+
+.team-container{
+  position: relative;
+  padding: 200px 0px 100px 0px ;
+
+}
+
+.member-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+  background-color: $secondary-color;
+}
+
+.member-container{
+  margin-top: 5px;
+  width: 50%;
+}
+
+.member-frame{
+  // background-color: white;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+}
+
+.bio-container{
+  width: 50%;
+}
+
+.bio-container h1{
+  margin-bottom: 40px;
+}
+
+.social-row{
+  width: 100%;
+  display:flex;
+  justify-content: flex-end;
+}
+
+.social-icon{
+  width: 40px;
+  margin-left: 10px;
+}
 // footer
 
+.footer-container{
+  padding-top: 380px;
+  text-align: center;
+}
+
 footer{
-  background-color: $primary-color;
+  background-color: $black-secondary;
+  font-family: $heading-font;
   width: 100%;
-  height: 515px;
+  height: 700px;
   display: flex;
   text-align: center;
+  margin-top: -220px;
   margin-bottom: -1px;
   justify-content: center;
   color: $light-color;
-  clip-path: polygon(0 0, 50% 25%, 100% 0, 100% 100%, 0 100%);
   border: none;
 }
+
+
+.footer-row{
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-link{
+  font-size: 30px;
+  font-weight: 100;
+  width: 260px;
+}
+
+.dot{
+  display: block;
+  height: 10px;
+  width: 10px;
+  background-color: $light-color;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
 
 .base{
   width: 100%;
@@ -266,7 +418,7 @@ footer{
   font-weight: 100;
   height: 85px;
   z-index: 10;
-  background-color: $primary-dark-accent;
+  background-color: black;
 }
 
 
@@ -325,6 +477,25 @@ footer{
         display: none;
       }
     
+      section .container .text-block{
+        width: 100%;
+        // padding-right: 50px
+      }
+
+      section .container{
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+
+      .text-container{
+        width: 100%;
+      }
+      
+      .icon-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
 
       // hero
       .hero{
