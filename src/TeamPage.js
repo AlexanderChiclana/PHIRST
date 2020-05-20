@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import MailIcon from '../src/images/mail-icon.png'
 import LinkedinIcon from '../src/images/linkedin-icon.png'
 
@@ -9,19 +9,21 @@ import Olivia from './images/olivia.png'
 import Maylin from './images/Maylin.jpg'
 import Arjee from './images/arjee.jpg'
 import Alexander from './images/Alexander.JPG'
+import Jen from './images/Jennifer-Nazareno.jpg'
+import Don from './images/Don-Operario.jpg'
 
 const members = [
     {
         name: 'Don',
-        pic: '',
-        bio: '',
+        pic: Don,
+        bio: 'Don Operario is Professor of Public Health in the Department of Behavior and Social Sciences in the School of Public Health. He was trained as a Social and Health Psychologist (BA, UCLA; MS, PhD, UMass Amherst; Postdoctoral Fellow, UC San Francisco). He was previously on the faculty of the University of Oxford (Department of Social Policy and Social Work) and before that was at the University of California San Francisco (Center for AIDS Prevention Studies - Department of Medicine). His research addresses two inter-related areas. The first general area concerns the social psychological determinants of HIV, sexual health, and related health issues (substance use, mental health) in diverse communities, with an emphasis on developing and evaluating theory-based social and behavioral interventions for members of high-risk groups. A second research area concerns the lived experiences associated with social inequality, with an emphasis on understanding the perspectives of disadvantaged group members and addressing associated health and psychosocial disparities. He conducts research addressing both U.S. domestic and international public health issues.',
         mail: '',
         linkedIn: ''
     },
   {
       name: 'Jen',
-      pic: '',
-      bio: '',
+      pic: Jen,
+      bio: 'Jennifer Nazareno, Ph.D is an Assistant Professor of Public Health & Entrepreneurship. She has a dual appointment at the Center and in the Department of Behavioral and Social Sciences in the School of Public Health. Jennifer’s speciality areas include medical sociology and health; qualitative methodology; women’s migration, labor and entrepreneurship. Jennifer is currently completing her book manuscript, Hidden Health Care: Immigrant Filipina Nurses Building Businesses in the Shadows of the U.S. Long-Term Care Industry. It’s the first book to examine the emergence of immigrant Filipino women entrepreneurs in the United States starting as early as the 1970’s. Jennifer’s peer-reviewed publications can be found in the International Journal of Health Services, Social Science & Medicine, American Journal of Industrial Medicine, Medical Care, and the International Journal of Entrepreneurial Behavior & Research.She is the 2019 recipient of the prestigious Dean’s Award for Excellence in Teaching and the 2020 Hazeltine Mentorship Award in Entrepreneurship. She currently teaches PHP 1680U Intersectionality and Health Inequities and UNIV 1089 Global Dynamics and Critical Perspectives on Immigrant Entrepreneurship in the United States.',
       mail: '',
       linkedIn: ''
   },
@@ -78,6 +80,9 @@ const members = [
 ]
 
 const MemberRow = props => {
+
+const [isOpen, toggleOpen] = useState(false)
+
   return (
     <div className="icon-row">
       <div className="member-container">
@@ -91,7 +96,9 @@ const MemberRow = props => {
       <div className="bio-container">
         <h1>{props.name}</h1>
         <p className="medium-spacing">
-            {props.bio}
+            { isOpen ?  props.bio : props.bio.substring(0, 500) + ' '}
+          
+            { props.bio.length > 500 && !isOpen && <span className='read-more' onClick={ () => toggleOpen(prevOpen => !prevOpen)}>... Read More</span>}
         </p>
         <div className="social-row">
           <img

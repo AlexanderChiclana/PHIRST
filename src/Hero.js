@@ -4,6 +4,7 @@ class Hero extends Component {
     render() {
         return (
             <div className='hero'>
+                <div className='hero-buffer'/>
                 <div className='banner container'>
                 PHIRST
                 </div>
@@ -19,8 +20,8 @@ class Hero extends Component {
                         <div className='divider'></div>
                         <ul className='hero-navigation'>
                             <li>our mission</li>
-                            <li>opportunities</li>
-                            <li>initiatives</li>
+                            <li>what we do</li>
+                            <li>mentorship</li>
                             <li>research</li>
                             <li>contact</li>
                         </ul>

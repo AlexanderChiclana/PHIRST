@@ -30,11 +30,12 @@ class ResearchPage extends Component {
                   src={require('./images/right-arrow.svg')}></img>
                   </h3> */}
             </div>
-            <div className="circle light">
+            <div className="circle light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
               <img
-                alt="map of phillipines"
-                src={require('./images/philipine black.png')}
-                style={{ height: '100%' }}
+                alt="research icon"
+                className="fade-in"
+                src={require('./images/business-and-finance.png')}
+                style={{ height: '60%' }}
               ></img>
             </div>
           </div>

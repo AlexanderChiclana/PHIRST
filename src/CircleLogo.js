@@ -14,7 +14,7 @@ function CircleLogo(props) {
             height: '310px',
             width: '310px'
         }}>
-            <Logo />
+            {/* <Logo /> */}
         </div>
     </div>
     );

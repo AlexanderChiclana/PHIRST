@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import  {Link, useLocation } from 'react-router-dom'
+import  {Link, withRouter } from 'react-router-dom'
 import Logo from './Logo.js'
 import Hamburger from './Hamburger.js'
 
@@ -9,7 +9,10 @@ class Navbar extends Component {
     
         this.state = {
           prevScrollpos: window.pageYOffset,
+          prevWindowWidth: window.innerWidth,
+          isOpen: false,
           downPage: true,
+          topPage: true,
           visible: true
         }
         this.showRef = React.createRef()
@@ -17,6 +20,7 @@ class Navbar extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleResize)
   }
 
   // Remove the event listener when the component is unmount.
@@ -24,14 +28,26 @@ class Navbar extends Component {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.onRouteChanged();
+    }
+  }
+
+  onRouteChanged = () => {
+    this.setState({
+      isOpen: false
+    })
+  }
+
   // Hide or show the menu.
   handleScroll = () => {
-    const { prevScrollpos } = this.state
+    const { prevScrollpos, isOpen} = this.state
 
     const currentScrollPos = window.pageYOffset
-    
+    console.log(isOpen)
 
-    const visible = prevScrollpos > currentScrollPos || currentScrollPos < 500
+    const visible =  isOpen || prevScrollpos > currentScrollPos || currentScrollPos < 500 
     // const visible = currentScrollPos > 500
     // const downPage = currentScrollPos > 550
     const topPage = currentScrollPos < 10
@@ -45,14 +61,34 @@ class Navbar extends Component {
     })
   }
 
+  handleResize = () => {
+    const { prevWindowWidth } = this.state
+
+    const currentWindowWidth = window.innerWidth
+
+    const hasWindowChanged = prevWindowWidth !== currentWindowWidth
+
+    this.setState({
+      isOpen: !hasWindowChanged
+    })
+
+  }
+
+  toggleOpen = () => {
+    this.setState(prevState => ({
+        isOpen: !prevState.isOpen
+      }))
+}
+
   render() {
     return (
+      <React.Fragment>
       <div 
       className="navigation-bar"
       style={{
         top: this.state.visible ? '0px' : '-140px',
-        transition: 'top 300ms',
-        boxShadow: this.state.topPage ? 'none' : '0 2px 4px -1px rgba(0,0,0,0.2)'
+        transition: 'top 300ms, box-shadow 700ms',
+        boxShadow: this.state.topPage || this.state.isOpen ? 'none' : '0 2px 4px -1px rgba(0,0,0,0.2)'
 
       }}  
       >
@@ -68,11 +104,21 @@ class Navbar extends Component {
            <Link to={'/contact'}><div className='route'>contact</div></Link>
 
         </div>
-        <Hamburger />
-
+        <Hamburger toggleOpen={this.toggleOpen} isOpen={this.state.isOpen}/>
       </div>
+      <div className="mobile-nav" style={{ height: this.state.isOpen ? '450px' : '0vh' }}>
+      <div className='mobile-navigation-routes'>
+        <Link to={'/team'}><div className='route'>team</div></Link>
+          <Link to={'/service'}><div className='route'>service</div></Link>
+           <Link to={'/training'}><div className='route'>training</div></Link>
+           <Link to={'/research'}><div className='route'>research</div></Link>
+           <Link to={'/contact'}><div className='route'>contact</div></Link>
+
+        </div>
+      </div>
+      </React.Fragment>
     )
   }
 }
 
-export default Navbar
+export default withRouter(Navbar)

@@ -3,20 +3,11 @@ import './Hamburger.scss';
 
 
 class Hamburger extends Component {
-    state={
-        isOpen: false
-    }
-
-    toggleOpen = () => {
-        this.setState(prevState => ({
-            isOpen: !prevState.isOpen
-          }))
-    }
     render() {
         return (
-            <div id="menuToggle" onClick={this.toggleOpen}>
+            <div id="menuToggle" onClick={this.props.toggleOpen}>
                 
-            <div  className={this.state.isOpen ? 'checked checkbox': 'checkbox'}/>
+            <div  className={this.props.isOpen ? 'checked checkbox': 'checkbox'}/>
             <span></span>
             <span></span>
             <span></span>

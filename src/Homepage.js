@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Hero from './Hero.js'
 import Arrow from './Arrow.js'
 import CircleLogo from './CircleLogo.js'
+import Timeline from './Timeline.js'
 
 class Homepage extends Component {
   render() {
@@ -37,15 +38,24 @@ class Homepage extends Component {
               </h3> */}
               {/* <Arrow message={'All Inititaives'} /> */}
             </div>
-            {/* <div className="circle light"> */}
+            <div className="circle light" style={{position: 'relative'}}>
               {/* <Logo height={''}/> */}
-              {/* <img
+              <img
                 alt="map of phillipines"
+                className="bottom"
                 src={require('./images/philipine black.png')}
-                style={{ height: '100%' }}
-              ></img> */}
-            {/* </div> */}
-            <CircleLogo />
+                style={{ height: '100%', position: 'absolute' }}
+              ></img>
+
+               <img
+                alt="map of phillipines"
+                className="top"
+                src={require('./images/usa black.png')}
+                style={{ height: '100%', position: 'absolute' }}
+              ></img>
+
+            </div>
+            {/* <CircleLogo /> */}
           </div>
         </section>
 
@@ -53,7 +63,13 @@ class Homepage extends Component {
           <div className="container">
             <div className="icon-row">
               <div className="icon-container">
-                <div className="circle-small"></div>
+                <div className="circle-small" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <img
+          alt="map of usa"
+          src={require('./images/maps-and-flags.png')}
+          style={{ height: '200px', filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)' }}
+        ></img>
+                </div>
               </div>
 
               <div className="text-container">
@@ -75,7 +91,13 @@ class Homepage extends Component {
 
             <div className="icon-row">
               <div className="icon-container">
-                <div className="circle-small"></div>
+              <div className="circle-small" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <img
+          alt="map of usa"
+          src={require('./images/educational.png')}
+          style={{ height: '170px', filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)' }}
+        ></img>
+                </div>
               </div>
               <div className="text-container">
                 <h1 className="light-font">Training</h1>
@@ -97,7 +119,13 @@ class Homepage extends Component {
 
             <div className="icon-row">
               <div className="icon-container">
-                <div className="circle-small"></div>
+              <div className="circle-small" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <img
+          alt="map of usa"
+          src={require('./images/business-and-finance.png')}
+          style={{ height: '170px', filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)' }}
+        ></img>
+                </div>
               </div>
               <div className="text-container">
                 <h1 className="light-font">Research</h1>
@@ -121,10 +149,10 @@ class Homepage extends Component {
           </div>
         </section>
 
-        <section className="curved-bottom initiatives-section half-split">
+        <section className="curved-bottom initiatives-section half-split"> 
           <div className="container">
             <div className="text-block">
-              <h1>Our Initiatives</h1>
+              <h1>Mentorship</h1>
               <p>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -139,12 +167,12 @@ class Homepage extends Component {
               alt='right arrow'
               src={require('./images/right-arrow.svg')}></img>
               </h3> */}
-              <Arrow message={'all inititaives'} />
+              <Arrow message={'past trainees'} />
             </div>
-            <div className="circle light">
+            <div className="circle light" style={{overflow: 'hidden', border: '15px solid white'}}>
               <img
                 alt="map of phillipines"
-                src={require('./images/philipine black.png')}
+                src={require('./images/mentoring.PNG')}
                 style={{ height: '100%' }}
               ></img>
             </div>
@@ -161,7 +189,9 @@ class Homepage extends Component {
           <div className="white-fill"> </div>
         </section> */}
 
-        <section className="white-body"></section>
+        <section className="white-body">
+          <Timeline />
+        </section>
       </div>
     )
   }
