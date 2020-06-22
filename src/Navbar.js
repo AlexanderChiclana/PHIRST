@@ -3,6 +3,29 @@ import  {Link, withRouter } from 'react-router-dom'
 import Logo from './Logo.js'
 import Hamburger from './Hamburger.js'
 
+
+
+class NavbarLink extends Component {
+  state={
+    isCurrent: false
+  }
+
+  render() {
+
+    const { route, location } = this.props
+
+    return (
+      <div>
+        <Link to={`/${route}`}>
+     <div className={location.pathname.includes(route) ? 'route active' : 'route'}>{route}</div> 
+        </Link>
+
+      </div>
+    );
+  }
+}
+
+
 class Navbar extends Component {
     constructor(props) {
         super(props)
@@ -99,11 +122,12 @@ class Navbar extends Component {
          </div>
         
         <div className='navigation-routes'>
-        <Link to={'/team'}><div className='route'>team</div></Link>
-          <Link to={'/service'}><div className='route'>service</div></Link>
-           <Link to={'/training'}><div className='route'>training</div></Link>
-           <Link to={'/research'}><div className='route'>research</div></Link>
-           <Link to={'/contact'}><div className='route'>contact</div></Link>
+        {/* <Link to={'/research'}><div className='route'>research</div></Link> */}
+        <NavbarLink location={this.props.location} route="research"/>
+        <NavbarLink location={this.props.location} route="service"/>
+        <NavbarLink location={this.props.location} route="training"/>
+        <NavbarLink location={this.props.location} route="team"/>
+        <NavbarLink location={this.props.location} route="contact"/>
 
         </div>
         <Hamburger toggleOpen={this.toggleOpen} isOpen={this.state.isOpen}/>
@@ -115,11 +139,11 @@ class Navbar extends Component {
           }}>
       <div className='mobile-navigation-routes'>
         <div>
-        <Link to={'/team'}><div className='route'>team</div></Link>
-          <Link to={'/service'}><div className='route'>service</div></Link>
-           <Link to={'/training'}><div className='route'>training</div></Link>
-           <Link to={'/research'}><div className='route'>research</div></Link>
-           <Link to={'/contact'}><div className='route'>contact</div></Link>
+        <NavbarLink location={this.props.location} route="research"/>
+        <NavbarLink location={this.props.location} route="service"/>
+        <NavbarLink location={this.props.location} route="training"/>
+        <NavbarLink location={this.props.location} route="team"/>
+        <NavbarLink location={this.props.location} route="contact"/>
           </div>
         </div>
       </div>

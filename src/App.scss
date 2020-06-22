@@ -162,6 +162,10 @@ img{
   padding-bottom: 20px;
 }
 
+.hero-navigation li:hover{
+  cursor: pointer;
+}
+
 // navbar
 
 .navbar-buffer{
@@ -189,6 +193,10 @@ img{
 .navigation-routes .route{
   padding: 0px 30px;
   font-size: $medium-font;
+}
+
+.route.active {
+  color: $secondary-color;
 }
 
 
@@ -241,7 +249,7 @@ section{
 
 .icon-section{
   // height:1760px;
-  background-color: #4E4E49;
+  background-color:#464641;
 }
 
 .icon-section .container{
@@ -361,7 +369,7 @@ section .container .text-block{
 
 .text-block p{
   // line-height: 38px;
-  line-height: 1.8em;
+  line-height: 2em;
   font-size: 18px;
   margin: 45px 0px;
 }
@@ -845,7 +853,7 @@ footer{
 // animations
 
 .fade-in {
-  opacity: .9;
+  opacity: .8;
   animation:ease-in 1;
   animation-name: fade-in;
   animation-duration: 1s;
@@ -853,7 +861,7 @@ footer{
 
 @keyframes fade-in {
   0% { opacity: 0; }
-  100% { opacity: .9; }
+  100% { opacity: .8; }
 }
 
 

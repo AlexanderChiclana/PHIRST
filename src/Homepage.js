@@ -3,18 +3,46 @@ import Hero from './Hero.js'
 import Arrow from './Arrow.js'
 import CircleLogo from './CircleLogo.js'
 import Timeline from './Timeline.js'
+import scrollToComponent from 'react-scroll-to-component';
+
+
 
 class Homepage extends Component {
+  
+
   render() {
     return (
       <div>
-        <Hero />
-        {/* <img
-          alt="map of usa"
-          src={require('./images/usa black.png')}
-          style={{ height: '200px', position: 'absolute', left: '30px' }}
-        ></img> */}
-        <section className="mission half-split">
+        <div className="hero">
+          <div className="hero-buffer" />
+          <div className="banner container">PHIRST</div>
+          <div className="hero-diamond">
+            <div className="left-triangle">
+              <img
+                alt="map of phillipines"
+                src={require('./images/philipine black.png')}
+              ></img>
+            </div>
+
+            <div className="right-triangle">
+              <div className="container">
+                <div className="slogan">
+                  Philippine Health Initiative Research Service and Training
+                </div>
+                <div className="divider"></div>
+                <ul className="hero-navigation">
+
+       
+                  <li onClick={() => scrollToComponent(this.mission, { offset: 0, align: 'top', duration: 500})}>our mission</li>
+                  <li onClick={() => scrollToComponent(this.whatWeDo, { offset: 0, align: 'top', duration: 500})}>what we do</li>
+                  <li onClick={() => scrollToComponent(this.mentorship, { offset: 0, align: 'top', duration: 500})}>mentorship</li>
+                  <li>contact</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section className="mission half-split" ref={(section) => { this.mission = section; }}>
           <div className="container">
             <div className="text-block">
               <h1>We are PHIRST</h1>
@@ -39,24 +67,25 @@ class Homepage extends Component {
               </h3> */}
               {/* <Arrow message={'All Inititaives'} /> */}
             </div>
-              {/* <Logo height={''}/> */}
-              <div className="circle light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-
+            {/* <Logo height={''}/> */}
+            <div
+              className="circle light"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
               <img
                 alt="map of phillipines"
-        
                 src={require('./images/brown-transparent.png')}
-                style={{ height: '200px'}}
-              ></img> 
-              </div>
-         
-
-          
-          
+                style={{ height: '200px' }}
+              ></img>
+            </div>
           </div>
         </section>
 
-        <section className="angled-top icon-section">
+        <section className="angled-top icon-section" >
           <div className="container">
             <div className="icon-row">
               <div className="icon-container">
@@ -79,7 +108,7 @@ class Homepage extends Component {
                   ></img>
                 </div>
               </div>
-              <div className="text-container">
+              <div className="text-container" ref={(section) => { this.whatWeDo = section; }}>
                 <h1 className="light-font">Research</h1>
                 <p className="light-font medium-spacing">
                   PHIRST researchers leverage both qualitative and quantitative
@@ -162,10 +191,10 @@ class Homepage extends Component {
           </div>
         </section>
 
-        <section className="curved-bottom initiatives-section half-split">
+        <section className="curved-bottom initiatives-section half-split" ref={(section) => { this.mentorship = section; }}>
           <div className="container tablet-reverse">
             <div className="text-block">
-              <h1>Mentorship</h1>
+              <h1 >Mentorship</h1>
               <p>
                 A central component of our mission is to foster community and
                 provide mentorship to students interested in improving Filipino

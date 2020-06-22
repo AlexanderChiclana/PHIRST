@@ -112,7 +112,7 @@ const MemberRow = props => {
       <div className="bio-container">
         <h1>{props.name}</h1>
         <p className="medium-spacing">
-          {isOpen ? props.bio : props.bio.substring(0, 500) + ' '}
+          {isOpen ? props.bio : props.bio.substring(0, 600) + ' '}
 
           {props.bio.length > 500 && !isOpen && (
             <span

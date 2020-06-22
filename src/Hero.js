@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { ScrollTo } from "react-scroll-to";
+
 
 class Hero extends Component {
     render() {
@@ -20,10 +22,10 @@ class Hero extends Component {
                         </div>
                         <div className='divider'></div>
                         <ul className='hero-navigation'>
+         
                             <li>our mission</li>
                             <li>what we do</li>
                             <li>mentorship</li>
-                            {/* <li>research</li> */}
                             <li>contact</li>
                         </ul>
                         </div>
