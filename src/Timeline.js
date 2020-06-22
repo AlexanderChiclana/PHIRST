@@ -145,7 +145,7 @@ const MenteeList = [
       "startYear": 2003,
       "endYear": 2003,
       "researchArea": "Molecular epidemiological analysis of tuberculosis among Filipino HIV patients",
-      "currentPosition": "Professor of Infectious Diseases, Philippine General Hospital, University of the Philippines Manila and Executive Director, Philippine Department of Sciences and Technology � Philippine Council for Health Research and Development (DOST-PCHRD), Republic of the Philippines"
+      "currentPosition": "Professor of Infectious Diseases, Philippine General Hospital, University of the Philippines Manila and Executive Director, Philippine Department of Sciences and Technology Philippine Council for Health Research and Development (DOST-PCHRD), Republic of the Philippines"
     },
     {
       "name": "Reynaldo Imperial",

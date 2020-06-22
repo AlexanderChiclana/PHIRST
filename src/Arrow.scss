@@ -21,6 +21,10 @@ $arrow-head-thickness: $shaft-thickness;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.text{
+  color: $white;
+  letter-spacing: .05em;
+}
 
 // The Arrow
 
@@ -35,12 +39,12 @@ $arrow-head-thickness: $shaft-thickness;
 
     > .shaft {
       width: 0;
-      background-color: $gray;
+      background-color: $white;
       
       &:before,
       &:after {
         width: 0;
-        background-color: $gray;
+        background-color: $white;
       }
 
       &:before {
@@ -78,7 +82,7 @@ $arrow-head-thickness: $shaft-thickness;
   }
 
   > .shaft {
-    background-color: $gray;
+    background-color: $white;
     display: block;
     height: $shaft-thickness;
     position: relative;
@@ -88,7 +92,7 @@ $arrow-head-thickness: $shaft-thickness;
 
     &:before,
     &:after {
-      background-color: $gray;
+      background-color: $white;
       content: '';
       display: block;
       height: $arrow-head-thickness;
@@ -115,7 +119,7 @@ $arrow-head-thickness: $shaft-thickness;
 
 .animated-arrow {
   display: inline-block;
-  color: $gray;
+  color: $white;
   font-size: 1em;
 //   font-style: italic;
   text-decoration: none;

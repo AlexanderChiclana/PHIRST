@@ -1,8 +1,10 @@
 import './Arrow.scss'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Arrow = (props) => {
   return (
+    <Link to={props.route}>
     <div className='link-arrow'>
       <a className="animated-arrow">
         <span className="the-arrow -left">
@@ -16,6 +18,7 @@ const Arrow = (props) => {
         </span>
       </a>
     </div>
+    </Link>
   )
 }
 

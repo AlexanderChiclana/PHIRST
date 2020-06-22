@@ -20,8 +20,8 @@ class Homepage extends Component {
               <h1>We are PHIRST</h1>
               <p>
                 The Brown Philippine Health Initiative for Research, Service, &
-                Training is an effort by student and faculty at the Brown School
-                of Public Health to advance the health of people in the
+                Training is an effort by students and faculty at the Brown
+                School of Public Health to advance the health of people in the
                 Philippines and Filipino Americans. Though we are mostly focused
                 on doing so through the development of knowledge through
                 scholarship, we are committed to developing this knowledge
@@ -29,7 +29,8 @@ class Homepage extends Component {
                 advocacy infrastructure while doing this research. PHIRST is a
                 collective effort focused on building a critical mass of
                 scholar-advocates; and a collaborative, team-based approach to
-                improving Filipino and Filipino American health
+                improving Filipino and Filipino American health is a fundamental
+                aspect of PHIRST.
               </p>
               {/* <h3 className="link-arrow">NEXT 
               <img 
@@ -38,24 +39,20 @@ class Homepage extends Component {
               </h3> */}
               {/* <Arrow message={'All Inititaives'} /> */}
             </div>
-            <div className="circle light" style={{position: 'relative'}}>
               {/* <Logo height={''}/> */}
+              <div className="circle light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+
               <img
                 alt="map of phillipines"
-                className="bottom"
-                src={require('./images/philipine black.png')}
-                style={{ height: '100%', position: 'absolute' }}
-              ></img>
+        
+                src={require('./images/brown-transparent.png')}
+                style={{ height: '200px'}}
+              ></img> 
+              </div>
+         
 
-               <img
-                alt="map of phillipines"
-                className="top"
-                src={require('./images/usa black.png')}
-                style={{ height: '100%', position: 'absolute' }}
-              ></img>
-
-            </div>
-            {/* <CircleLogo /> */}
+          
+          
           </div>
         </section>
 
@@ -63,12 +60,57 @@ class Homepage extends Component {
           <div className="container">
             <div className="icon-row">
               <div className="icon-container">
-                <div className="circle-small" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <img
-          alt="map of usa"
-          src={require('./images/maps-and-flags.png')}
-          style={{ height: '200px', filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)' }}
-        ></img>
+                <div
+                  className="circle-small"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <img
+                    alt="map of usa"
+                    src={require('./images/business-and-finance.png')}
+                    style={{
+                      height: '65%',
+                      filter:
+                        'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)'
+                    }}
+                  ></img>
+                </div>
+              </div>
+              <div className="text-container">
+                <h1 className="light-font">Research</h1>
+                <p className="light-font medium-spacing">
+                  PHIRST researchers leverage both qualitative and quantitative
+                  methods to answer research questions. Our work incorporates a
+                  wide range of data collection methods, from primary collection
+                  of data through smaller community-based surveys to secondary
+                  analyses of large publicly available datasets.
+                </p>
+                <Arrow message={'our research'} route={'/research'} />
+              </div>
+            </div>
+
+            <div className="icon-row">
+              <div className="icon-container">
+                <div
+                  className="circle-small"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <img
+                    alt="map of usa"
+                    src={require('./images/maps-and-flags.png')}
+                    style={{
+                      height: '80%',
+                      filter:
+                        'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)'
+                    }}
+                  ></img>
                 </div>
               </div>
 
@@ -76,27 +118,34 @@ class Homepage extends Component {
                 <h1 className="light-font">Service</h1>
                 <p className="light-font medium-spacing">
                   PHIRST would not have been started without community-based
-                  organizations and their invaluable contributions to our work,
-                  so a key goal of PHIRST is to leverage our research into
-                  advocacy and contributions to our community partners'
-                  missions. PHIRST researchers engage in active conversation and
-                  collaboration with leaders of community-based organizations to
-                  allow for effective exchange of ideas. PHIRST researchs have
-                  contributed op-eds. combining research insights alongside
-                  highlights of efforts by community-based organizations in the
-                  Philippines.
+                  organization partnerships and their invaluable contributions
+                  to the work, so a key goal of PHIRST is to leverage our
+                  research into advocacy and contributions to our community
+                  partners' missions.
                 </p>
+                <Arrow message={'our service'} route={'/service'} />
               </div>
             </div>
 
             <div className="icon-row">
               <div className="icon-container">
-              <div className="circle-small" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <img
-          alt="map of usa"
-          src={require('./images/educational.png')}
-          style={{ height: '170px', filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)' }}
-        ></img>
+                <div
+                  className="circle-small"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <img
+                    alt="map of usa"
+                    src={require('./images/educational.png')}
+                    style={{
+                      height: '60%',
+                      filter:
+                        'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)'
+                    }}
+                  ></img>
                 </div>
               </div>
               <div className="text-container">
@@ -105,73 +154,37 @@ class Homepage extends Component {
                   Training has been a core component of PHIRST since its
                   inception, as several Brown undergraduate and graduate
                   students have benefited from opportunities and mentorship from
-                  PHIRST leadership. Funded by a grant from the Fogarty
-                  International Center, PHIRST hosts researchers from the
-                  University of the Philippines,. Manila for short-term visits
-                  and graduate degrees.PHIRST leadership also conducts working
-                  sessions in the Philippines to advance local research efforts.
-                  Ultimately, a key component of PHIRST is to advance the
-                  development of the next generation of researchers focused on
-                  issues impacting Filipinos and Filipino Americans.
+                  PHIRST leadership.
                 </p>
-              </div>
-            </div>
-
-            <div className="icon-row">
-              <div className="icon-container">
-              <div className="circle-small" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <img
-          alt="map of usa"
-          src={require('./images/business-and-finance.png')}
-          style={{ height: '170px', filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)' }}
-        ></img>
-                </div>
-              </div>
-              <div className="text-container">
-                <h1 className="light-font">Research</h1>
-                <p className="light-font medium-spacing">
-                  PHIRST researchers leverage both qualitative and quantitative
-                  methods to answer research questionsa. Our work incorporrates
-                  a wide range of data collection methods, from primary
-                  collection of data through smaller community-based surveys to
-                  secondary analyses of large publicly available datasets. Our
-                  work in the Philippines mostly focuses on HIV and key impacted
-                  communities like transgender women, cisgender men who have sex
-                  with men, and young adults, while our work among Filipino
-                  Americans mostly focuses on chronic health. PHIRST research
-                  has been presented and recognized with awards at national and
-                  international conferences, including the APHA Annual Meeting
-                  and International AIDS Conference, and published in academic
-                  journals, including AJPH, Global Public Health, and PloS one.
-                </p>
+                <Arrow message={'training program'} route={'/training'} />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="curved-bottom initiatives-section half-split"> 
-          <div className="container">
+        <section className="curved-bottom initiatives-section half-split">
+          <div className="container tablet-reverse">
             <div className="text-block">
               <h1>Mentorship</h1>
               <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim vevniam, quis nostrud exercitation ullamco laboris
-                nisi ut "Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris
+                A central component of our mission is to foster community and
+                provide mentorship to students interested in improving Filipino
+                and Filipino American health. Below is a timeline of former
+                students mentored by Dr. Operario since 1994.
               </p>
               {/* <h3 className="link-arrow">NEXT 
               <img 
               alt='right arrow'
               src={require('./images/right-arrow.svg')}></img>
               </h3> */}
-              <Arrow message={'past trainees'} />
+              {/* <Arrow message={'past trainees'} /> */}
             </div>
-            <div className="circle light" style={{overflow: 'hidden', border: '15px solid white'}}>
+            <div
+              className="circle light"
+              style={{ overflow: 'hidden', border: '15px solid white' }}
+            >
               <img
-                alt="map of phillipines"
+                alt="Don mentoring a student"
                 src={require('./images/mentoring.PNG')}
                 style={{ height: '100%' }}
               ></img>
@@ -190,6 +203,12 @@ class Homepage extends Component {
         </section> */}
 
         <section className="white-body">
+          <div
+            className="container timeline-header"
+            style={{ display: 'flex', justifyContent: 'center' }}
+          >
+            <h1>PHIRST Alumni</h1>
+          </div>
           <Timeline />
         </section>
       </div>

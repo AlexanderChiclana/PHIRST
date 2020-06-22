@@ -10,17 +10,7 @@ class TrainingPage extends Component {
             <div className="text-block">
               <h1>Our Training</h1>
               <p>
-                Training has been a core component of PHIRST since its
-                inception, as several Brown undergraduate and graduate students
-                have benefited from opportunities and mentorship from PHIRST
-                leadership. Funded by a grant from the Fogarty International
-                Center, PHIRST hosts researchers from the University of the
-                Philippines,. Manila for short-term visits and graduate
-                degrees. PHIRST leadership also conducts working sessions in the
-                Philippines to advance local research efforts. Ultimately, a key
-                component of PHIRST is to advance the development of the next
-                generation of researchers focused on issues impacting Filipinos
-                and Filipino Americans.
+              Funded by a grant from the Fogarty International Center, PHIRST hosts researchers from the University of the Philippines, Manila for short-term visits and graduate degrees. PHIRST leadership also conducts working sessions in the Philippines to advance local research efforts. Ultimately, a key component of PHIRST is to advance the development of the next generation of researchers focused on issues impacting Filipinos and Filipino Americans. 
               </p>
               {/* <h3 className="link-arrow">NEXT 
               <img 

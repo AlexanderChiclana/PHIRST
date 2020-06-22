@@ -5,7 +5,7 @@ $color2: #D81D1F;
 $color3: #2D4059;
 
 .timeline-container{
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .main-timeline{
@@ -72,7 +72,7 @@ $color3: #2D4059;
 }
 .main-timeline .timeline-content{
     width: 50%;
-    padding: 60px 40px 60px 80px;
+    padding: 60px 40px 60px 0px;
     // height of timeline content
 }
 .main-timeline .title{
@@ -130,7 +130,7 @@ $color3: #2D4059;
 .main-timeline .timeline:nth-child(2n) .timeline-icon:after{ left: -62px; }
 .main-timeline .timeline:nth-child(2n) .timeline-content{
     float: right;
-    padding: 60px 80px 60px 40px;
+    padding: 60px 0px 60px 40px;
     // height of timeline content
 }
 .main-timeline .timeline:nth-child(2n) .icon{
@@ -216,11 +216,21 @@ $color3: #2D4059;
     .main-timeline .icon i,
     .main-timeline .timeline:nth-child(2n) .icon .initial{
         float: none;
-        width: 70px;
-        height: 70px;
-        line-height: 74px;
-        font-size: 44px;
+        // width: 70px;
+        // height: 70px;
+        // line-height: 74px;
+        // font-size: 44px;
         margin: 0 20px 0 0;
+
+        //
+        display: inline-block;
+        width: 85px;
+        height: 85px;
+        line-height: 87px;
+        border-radius: 50%;
+        font-size: 44px;
+        color: #fff;
+        text-align: center;
     }
     .main-timeline .timeline:nth-child(2n) .year{ top: -6px; }
 }

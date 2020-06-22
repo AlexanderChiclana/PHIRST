@@ -14,17 +14,19 @@ class Hero extends Component {
                     </div>
                     
                     <div className='right-triangle'>
+                        <div className='container'>
                         <div className='slogan'>
-                        Philippine health initiative research service and training
+                        Philippine Health Initiative Research Service and Training
                         </div>
                         <div className='divider'></div>
                         <ul className='hero-navigation'>
                             <li>our mission</li>
                             <li>what we do</li>
                             <li>mentorship</li>
-                            <li>research</li>
+                            {/* <li>research</li> */}
                             <li>contact</li>
                         </ul>
+                        </div>
                     </div>
                 </div>
             </div>

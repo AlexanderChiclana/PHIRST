@@ -26,6 +26,7 @@ class Navbar extends Component {
   // Remove the event listener when the component is unmount.
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.handleResize)
   }
 
   componentDidUpdate(prevProps) {
@@ -68,10 +69,11 @@ class Navbar extends Component {
 
     const hasWindowChanged = prevWindowWidth !== currentWindowWidth
 
-    this.setState({
-      isOpen: !hasWindowChanged
-    })
-
+    if (hasWindowChanged) {
+      this.setState({
+        isOpen: false
+      })
+    }
   }
 
   toggleOpen = () => {
@@ -106,14 +108,19 @@ class Navbar extends Component {
         </div>
         <Hamburger toggleOpen={this.toggleOpen} isOpen={this.state.isOpen}/>
       </div>
-      <div className="mobile-nav" style={{ height: this.state.isOpen ? '450px' : '0vh' }}>
+      <div className="mobile-nav" 
+        style={{ 
+          height: this.state.isOpen ? '450px' : '0vh', 
+          boxShadow: this.state.isOpen && '0 2px 4px -1px rgba(0,0,0,0.2)'
+          }}>
       <div className='mobile-navigation-routes'>
+        <div>
         <Link to={'/team'}><div className='route'>team</div></Link>
           <Link to={'/service'}><div className='route'>service</div></Link>
            <Link to={'/training'}><div className='route'>training</div></Link>
            <Link to={'/research'}><div className='route'>research</div></Link>
            <Link to={'/contact'}><div className='route'>contact</div></Link>
-
+          </div>
         </div>
       </div>
       </React.Fragment>
