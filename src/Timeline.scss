@@ -236,3 +236,12 @@ $color3: #2D4059;
     .main-timeline .timeline:nth-child(2n) .year{ top: -6px; }
 }
 
+@media (max-width : 480px) {
+    .timeline-content{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .description{
+        text-align: left;
+    }
+}

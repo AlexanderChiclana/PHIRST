@@ -214,7 +214,7 @@ const Timeline = () => {
 
     
         return (
-            <div className="container">
+            <div className="container ">
             
             <div className="row  timeline-container">
                 <div className="col-md-12">

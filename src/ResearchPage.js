@@ -203,7 +203,7 @@ class ResearchPage extends Component {
                   </h3> */}
             </div>
             <div
-              className="circle light"
+              className="circle light tablet-none"
               style={{
                 display: 'flex',
                 alignItems: 'center',

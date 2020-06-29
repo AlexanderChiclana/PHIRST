@@ -18,7 +18,7 @@ class TrainingPage extends Component {
               src={require('./images/right-arrow.svg')}></img>
               </h3> */}
             </div>
-            <div className="circle light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <div className="circle light tablet-none" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
               <img
                 alt="person teaching"
                 className="fade-in"

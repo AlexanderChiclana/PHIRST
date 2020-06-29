@@ -574,7 +574,7 @@ footer{
         margin-bottom: 100px;
       }
       
-   
+      
     }
 
     //custom footer mq
@@ -588,7 +588,9 @@ footer{
     /* Medium Devices, Desktops */
     @media (max-width : 992px) { 
       //nav responsive
-      
+      .tablet-none{
+        display: none !important;
+      }
       .navigation-bar{
         height: 120px;
       }
@@ -758,7 +760,24 @@ footer{
 
     /* Extra Small Devices, Phones */ 
     @media (max-width : 480px) {
+      // font
+      .text-container p{
+        font-size: 16px;
+      }
+      
+      .text-block p{
+        // line-height: 38px;
+        line-height: 2em;
+        font-size: 16px;
+      }
+
       // nav
+
+
+      .initiatives-section{
+        min-height: 0px;
+      }
+
       .navigation-bar{
         height: $mobile-navbar-height;
       }
@@ -790,7 +809,9 @@ footer{
       }
 
 
-
+      .white-body{
+        padding-top: 0px;
+      }
 
     
     
@@ -840,6 +861,9 @@ footer{
         clip-path: none;
       }
       
+      .timeline-header{
+        display: none !important;
+      }
 
     }
 

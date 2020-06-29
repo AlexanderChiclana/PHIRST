@@ -25,7 +25,7 @@ class ServicePage extends Component {
               </h3> */}
             </div>
             <div
-              className="circle light"
+              className="circle light tablet-none"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -98,16 +98,10 @@ class ServicePage extends Component {
               <div className="text-container">
                 <h3 className="">The Red Whistle</h3>
                 <p className="medium-spacing">
-                  The Red Whistle is a collaborative platform for people to come
-                  together and show their support to those living with HIV and
-                  AIDS. It is also an agent and partner for brands to show their
-                  support to HIV and AIDS advocacy. As HIV advocates, The Red
-                  Whistle aim to empower and inspire people to come together and
-                  help each other in the battle against HIV and AIDS. Using pop
-                  culture as a way to change mindsets, we hope to start
-                  discussions among the youth so that they will sound the alarm
-                  and spread the word that HIV is here — and that it must be
-                  stopped.
+                The Red Whistle is a collaborative platform for people and organizations to come together and show their support for those living with HIV. It is an agent for change and a partner for brands, celebrities, and influencers to get educated on HIV and participate in activities that aim to reduce HIV-related stigma and discrimination.
+
+As HIV advocates, The Red Whistle aims to empower and inspire people to come together and help each other in our commitment to promote HIV awareness and sex positivity. Using art, social media, and pop culture as tools to change people's mindsets, we hope to start discussions among young people so that they understand the issues underlying the rise of new HIV infections. Let's blow the whistle harder, sound the alarm that HIV is here so that it can be stopped.
+
                 </p>
                 {/* <Arrow message={'our service'} route={'/service'}/> */}
               </div>

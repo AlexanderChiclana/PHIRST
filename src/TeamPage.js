@@ -12,6 +12,7 @@ import Alexander from './images/Alexander.JPG'
 import Jen from './images/Jennifer-Nazareno.jpg'
 import Don from './images/Don-Operario.jpg'
 import Susan from './images/susan.jpg'
+import Maria from './images/Maria.jpg'
 
 const members = [
   {
@@ -77,6 +78,11 @@ const members = [
       'John Guigayoma is a doctoral student in Behavioral and Social Health Sciences at the Brown University School of Public Health. He currently has a master in public health in Health and Social Behavior from the University of California, Berkeley. His research interests include HIV health disparities among sexual and gender minorities and underrepresented racial and ethnic populations, including Filipinos and Filipino-Americans. Before PHIRST, John was a program manager at an Asian-American HIV organization in San Francisco overseeing HIV prevention and care programs. He also worked as a research associate in HIV surveillance at the San Francisco Department of Public Health. When he is not studying, John enjoys visiting his friends and family back in Southern California.',
     mail: '',
     linkedIn: ''
+  },
+  {
+    name: 'Maria Isabel Diaz',
+    pic: Maria,
+    bio: "Maria Isabel Diaz is a Masters student in Global Public Health in the School of Public Health at Brown University. She is a Brown University alumna with a Bachelor's degree in Neuroscience. Her research interests include the social determinants of substance use and recovery in Filipinx/Filipinx-Americans in both the Philippines and the United States.",
   },
   {
     name: 'Maylin C. Palatino',

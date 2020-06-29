@@ -221,9 +221,9 @@ class Homepage extends Component {
           </div>
         </section>
 
-        <section className="curved-top community-section">
+        {/* <section className="curved-top community-section">
           <div className="white-fill"> </div>
-        </section>
+        </section> */}
 
         {/* <section className="curved-bottom initiatives-section"></section> */}
 
