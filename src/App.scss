@@ -387,12 +387,50 @@ section .container .text-block{
   padding-bottom: 100px;
   padding-top: 200px;
   background-color: $light-color;
-  min-height: 1000px;
+  min-height: 600px;
   border-radius: 10vw;
 }
 
 //homepage
 
+
+//contact
+.contact{
+  padding-top: 0px !important;
+}
+
+
+
+.team-photo-container{
+  flex-basis: 350px;
+}
+
+.team-photo{
+  width: 350px;
+  height: 350px;
+  // width: 100%;
+  // height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 20px solid $secondary-color;
+  margin-right: 60px;
+}
+
+
+
+.contact-info{
+  // flex-basis: 625px;
+  // margin-left: 30px;
+  flex-grow: 2;
+}
+
+.contact-info h1{
+  margin-bottom: 40px;
+}
+
+.contact-info > p{
+  margin-bottom: 40px;
+}
 
 // team-page
 
@@ -536,6 +574,12 @@ footer{
     /* Small Devices, Tablets */
     @media (min-width : 768px) {
 
+      .contact{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 200px;
+      }
     }
 
     /* Medium Devices, Desktops */
@@ -585,8 +629,49 @@ footer{
       }
     }
 
+    @media (max-width : 992px) and (min-width : 480px) { 
+      .tablet-only-p-t{
+        padding-top: 150px !important;
+      }
+    }
+
     /* Medium Devices, Desktops */
     @media (max-width : 992px) { 
+      
+      .tablet-padding-top-none{
+        padding-top: 0px !important;
+      }
+      .tablet-margin-top-none{
+        margin-top: 0px !important;
+      }
+
+      .tablet-centered{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .shrink{
+        width: 200px !important;
+        height: 200px !important;
+      }
+
+      //general
+
+      .tablet-bottom-buffer{
+        margin-bottom: 40px;
+      }
+
+      .tablet-bottom-buffer-padding{
+        padding-bottom: 80px;
+      }
+
+
+      //container
+      .white-body{
+        padding-top: 50px;
+      }
+
       //nav responsive
       .tablet-none{
         display: none !important;
@@ -637,6 +722,14 @@ footer{
       .bio-container h1{
         margin-top: 40px;
       }
+      //
+
+      // contact 
+      // .contact{
+      //   width: 100%;
+      //   display: flex;
+      //   justify-content: center;
+      // }
 
       // hero
       .hero{
@@ -733,6 +826,17 @@ footer{
 
     /* Small Devices, Tablets */
     @media (max-width : 768px) {
+            //contact
+            .team-photo-container{
+              display: flex;
+              justify-content: center;
+            }
+
+            .team-photo{
+              margin-right: 0px;
+            }
+            
+
             //footer
             .footer-row{
               flex-wrap: wrap;
@@ -750,9 +854,10 @@ footer{
               padding-top: 300px;
             }
 
-            // .mission{
-            //   margin-bottom: 0px;
-            // }
+          .white-body{
+            padding-top: 0px;
+            padding-bottom: 50px;
+          }
 
     
             

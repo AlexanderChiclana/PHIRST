@@ -4,7 +4,7 @@ import Arrow from './Arrow.js'
 import CircleLogo from './CircleLogo.js'
 import Timeline from './Timeline.js'
 import scrollToComponent from 'react-scroll-to-component';
-
+import { Link } from 'react-router-dom'
 
 
 class Homepage extends Component {
@@ -36,13 +36,13 @@ class Homepage extends Component {
                   <li onClick={() => scrollToComponent(this.mission, { offset: 0, align: 'top', duration: 500})}>our mission</li>
                   <li onClick={() => scrollToComponent(this.whatWeDo, { offset: 0, align: 'top', duration: 500})}>what we do</li>
                   <li onClick={() => scrollToComponent(this.mentorship, { offset: 0, align: 'top', duration: 500})}>mentorship</li>
-                  <li>contact</li>
+                  <Link to={'/contact'}><li>contact</li></Link>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <section className="mission half-split" ref={(section) => { this.mission = section; }}>
+        <section className="mission half-split tablet-bottom-buffer-padding" ref={(section) => { this.mission = section; }}>
           <div className="container">
             <div className="text-block">
               <h1>We are PHIRST</h1>
@@ -68,8 +68,9 @@ class Homepage extends Component {
               {/* <Arrow message={'All Inititaives'} /> */}
             </div>
             {/* <Logo height={''}/> */}
+            <div className="tablet-centered">
             <div
-              className="circle light"
+              className="circle light shrink"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -79,18 +80,19 @@ class Homepage extends Component {
               <img
                 alt="map of phillipines"
                 src={require('./images/brown-transparent.png')}
-                style={{ height: '200px' }}
+                style={{ height: '65%' }}
               ></img>
             </div>
+          </div>
           </div>
         </section>
 
         <section className="angled-top icon-section" >
-          <div className="container">
+          <div className="container tablet-only-p-t">
             <div className="icon-row">
-              <div className="icon-container">
+              <div className="icon-container tablet-bottom-buffer">
                 <div
-                  className="circle-small"
+                  className="circle-small shrink"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -122,9 +124,9 @@ class Homepage extends Component {
             </div>
 
             <div className="icon-row">
-              <div className="icon-container">
+              <div className="icon-container tablet-bottom-buffer">
                 <div
-                  className="circle-small"
+                  className="circle-small shrink"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -157,9 +159,9 @@ class Homepage extends Component {
             </div>
 
             <div className="icon-row">
-              <div className="icon-container">
+              <div className="icon-container tablet-bottom-buffer">
                 <div
-                  className="circle-small"
+                  className="circle-small shrink"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -209,7 +211,7 @@ class Homepage extends Component {
               {/* <Arrow message={'past trainees'} /> */}
             </div>
             <div
-              className="circle light"
+              className="circle light tablet-bottom-buffer"
               style={{ overflow: 'hidden', border: '15px solid white' }}
             >
               <img

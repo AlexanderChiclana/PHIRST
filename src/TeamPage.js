@@ -13,6 +13,7 @@ import Jen from './images/Jennifer-Nazareno.jpg'
 import Don from './images/Don-Operario.jpg'
 import Susan from './images/susan.jpg'
 import Maria from './images/Maria.jpg'
+import Emily from './images/Emily.jpg'
 
 const members = [
   {
@@ -60,6 +61,13 @@ const members = [
     pic: Arjee,
     bio:
       'Arjee is a trans Filipina doctoral candidate in the Behavioral and Social Sciences Department. Her research engagements center on promoting structural and social-based interventions to improve the health of Filipinx transgender communities affected by a multitude of adverse health outcomes, such as HIV/AIDS, substance use, and negative mental health. This work includes advocating for institutional policies and practices support health equity.',
+    mail: '',
+    linkedIn: ''
+  },
+  {
+    name: 'Emily Yoshioka',
+    bio: 'Emily Yoshioka is an affiliated researcher based in Seattle, Washington. She currently holds a master of public health in Health Behavior and undergraduate degrees in public health and ethnic studies from Brown University. Overall, her broad interests are in promoting health equity across race, ethnicity, gender, and sexuality, particularly in regards to sexual and mental health outcomes. She works to address complex, socially relevant issues with social justice and public health lenses. ',
+    pic: Emily,
     mail: '',
     linkedIn: ''
   },
@@ -170,6 +178,8 @@ class TeamPage extends Component {
               src={require('./images/right-arrow.svg')}></img>
               </h3> */}
             </div>
+            
+              <div className="tablet-centered">
             <div
               className="circle light"
               style={{
@@ -188,6 +198,8 @@ class TeamPage extends Component {
                   borderRadius: '50%'
                 }}
               ></img>
+            </div>
+            
             </div>
           </div>
         </section>

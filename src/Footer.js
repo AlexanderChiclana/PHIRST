@@ -37,7 +37,11 @@ function Footer() {
         </div>
         </div>
       </footer>
-      <div className="base">© 2020 PHIRST all rights reserved.</div>
+      <div className="base">
+       <p> © 2020  PHIRST all rights reserved</p>
+
+        </div>
+      
     </React.Fragment>
   )
 }

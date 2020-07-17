@@ -9,7 +9,12 @@ import TeamPage from './TeamPage.js'
 import ServicePage from './ServicePage.js'
 import TrainingPage from './TrainingPage.js'
 import ResearchPage from './ResearchPage.js'
+import ContactPage from './ContactPage.js'
 import ScrollToTop from 'react-router-scroll-top'
+// import { library } from '@fortawesome/fontawesome-svg-core'
+
+// import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+// library.add(faTwitter) 
 
 function App() {
   return (
@@ -22,7 +27,8 @@ function App() {
           <Route exact path="/service" render={() => <ServicePage />} />
           <Route exact path="/training" render={() => <TrainingPage />} />
           <Route exact path="/research" render={() => <ResearchPage />} />
-          <Route path="/" render={() => <Footer />} />
+          <Route exact path="/contact" render={() => <ContactPage />} />
+          <Route path="/" render={() => <Footer />} />  
         </div>
       </ScrollToTop>
     </HashRouter>

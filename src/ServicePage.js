@@ -53,7 +53,7 @@ class ServicePage extends Component {
           </div>
         <div>
             <div className="icon-row">
-              <div className="icon-container">
+              <div className="icon-container tablet-bottom-buffer">
                 <div className="service-icon-block">
                   <img
                     alt="map of usa"
@@ -86,7 +86,7 @@ class ServicePage extends Component {
             </div>
 
             <div className="icon-row">
-              <div className="icon-container">
+              <div className="icon-container tablet-bottom-buffer">
                 <div className="service-icon-block">
                   <img
                     alt="map of usa"
@@ -108,7 +108,7 @@ As HIV advocates, The Red Whistle aims to empower and inspire people to come tog
             </div>
 
             <div className="icon-row">
-              <div className="icon-container">
+              <div className="icon-container tablet-bottom-buffer">
                 <div className="service-icon-block">
                   <img
                     alt="map of usa"
