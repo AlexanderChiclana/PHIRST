@@ -19,7 +19,7 @@ $large-font: 30px;
 $medium-font: 25px;
 
 $navbar-height: 120px;
-$mobile-navbar-height: 100px;
+$mobile-navbar-height: 80px;
 // base styles
 
 
@@ -932,7 +932,7 @@ footer{
         margin-top: 0px;
       }
       .hero-buffer{
-        height: 0px;
+        height: $mobile-navbar-height;
       }
 
       .right-triangle{
