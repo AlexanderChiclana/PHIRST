@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 $primary-color: #2D4059;
 $primary-dark-accent: #0B1D35;
@@ -9,7 +10,7 @@ $light-color: #F6F6F6;
 $bright-color: #D81D1F;
 $black-secondary: #343434;
 
-$heading-font: oswald; 
+$heading-font: 'Oswald', sans-serif;; 
 $heading-spacing: .06em;
 
 // $secondary-font: 'Merriweather', sans-serif;
@@ -489,6 +490,7 @@ section .container .text-block{
 
 .social-icon{
   width: 40px;
+  height: 40px;
   margin-left: 10px;
 }
 // footer
