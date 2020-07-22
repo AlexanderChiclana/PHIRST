@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react'
+import { Link } from 'react-router-dom'
 import MailIcon from '../src/images/mail-icon.png'
 import LinkedinIcon from '../src/images/linkedin-icon.png'
 
@@ -35,7 +36,8 @@ const members = [
   {
     name: 'Jennifer Nazareno',
     pic: Jen,
-    bio: 'Jennifer Nazareno, Ph.D. is an Assistant Professor of Public Health & Entrepreneurship. She has a dual appointment in the Dept. of Behavioral & Social Sciences in the School of Public Health (SPH) and the Nelson Center for Entrepreneurship. Jennifer’s specialty areas include medical sociology and health; qualitative methodology; women’s migration, labor and entrepreneurship. Jennifer is currently completing her book manuscript, Hidden Health Care: Immigrant Filipina Nurses Building Businesses in the Shadows of the U.S. Long-Term Care Industry. It’s the first book to examine the emergence of immigrant Filipino women entrepreneurs in the United States starting as early as the 1970’s. Jennifer’s peer-reviewed publications can be found in the International Journal of Health Services; Social Science & Medicine; American Journal of Industrial Medicine; Medical Care; International Journal of Entrepreneurial Behavior & Research; Aging & Society; and American Journal of Public Health.  Jennifer was the 2019 & 2020 recipient of the prestigious Dean’s Award for Excellence in Teaching. She is the first faculty member at SPH to win this award in consecutive years. She is also the recipient of other coveted awards including the 2020 Barrett Hazeltine Mentorship Award in Entrepreneurship and the 2020 Alpert School of Medicine PC+PM Research Mentorship Award. She currently teaches PHP 1680U Intersectionality and Health Inequities and UNIV 1089 Global Dynamics and Critical Perspectives on Immigrant Entrepreneurship in the United States.',
+    bio:
+      'Jennifer Nazareno, Ph.D. is an Assistant Professor of Public Health & Entrepreneurship. She has a dual appointment in the Dept. of Behavioral & Social Sciences in the School of Public Health (SPH) and the Nelson Center for Entrepreneurship. Jennifer’s specialty areas include medical sociology and health; qualitative methodology; women’s migration, labor and entrepreneurship. Jennifer is currently completing her book manuscript, Hidden Health Care: Immigrant Filipina Nurses Building Businesses in the Shadows of the U.S. Long-Term Care Industry. It’s the first book to examine the emergence of immigrant Filipino women entrepreneurs in the United States starting as early as the 1970’s. Jennifer’s peer-reviewed publications can be found in the International Journal of Health Services; Social Science & Medicine; American Journal of Industrial Medicine; Medical Care; International Journal of Entrepreneurial Behavior & Research; Aging & Society; and American Journal of Public Health.  Jennifer was the 2019 & 2020 recipient of the prestigious Dean’s Award for Excellence in Teaching. She is the first faculty member at SPH to win this award in consecutive years. She is also the recipient of other coveted awards including the 2020 Barrett Hazeltine Mentorship Award in Entrepreneurship and the 2020 Alpert School of Medicine PC+PM Research Mentorship Award. She currently teaches PHP 1680U Intersectionality and Health Inequities and UNIV 1089 Global Dynamics and Critical Perspectives on Immigrant Entrepreneurship in the United States.',
     mail: '',
     linkedIn: ''
   },
@@ -65,7 +67,8 @@ const members = [
   },
   {
     name: 'Emily Yoshioka',
-    bio: 'Emily Yoshioka is an affiliated researcher based in Seattle, Washington. She currently holds a master of public health in Health Behavior and undergraduate degrees in public health and ethnic studies from Brown University. Overall, her broad interests are in promoting health equity across race, ethnicity, gender, and sexuality, particularly in regards to sexual and mental health outcomes. She works to address complex, socially relevant issues with social justice and public health lenses. ',
+    bio:
+      'Emily Yoshioka is an affiliated researcher based in Seattle, Washington. She currently holds a master of public health in Health Behavior and undergraduate degrees in public health and ethnic studies from Brown University. Overall, her broad interests are in promoting health equity across race, ethnicity, gender, and sexuality, particularly in regards to sexual and mental health outcomes. She works to address complex, socially relevant issues with social justice and public health lenses. ',
     pic: Emily,
     mail: '',
     linkedIn: ''
@@ -89,7 +92,8 @@ const members = [
   {
     name: 'Maria Isabel Diaz',
     pic: Maria,
-    bio: "Maria Isabel Diaz is a Masters student in Global Public Health in the School of Public Health at Brown University. She is a Brown University alumna with a Bachelor's degree in Neuroscience. Her research interests include the social determinants of substance use and recovery in Filipinx/Filipinx-Americans in both the Philippines and the United States.",
+    bio:
+      "Maria Isabel Diaz is a Masters student in Global Public Health in the School of Public Health at Brown University. She is a Brown University alumna with a Bachelor's degree in Neuroscience. Her research interests include the social determinants of substance use and recovery in Filipinx/Filipinx-Americans in both the Philippines and the United States."
   },
   {
     name: 'Maylin C. Palatino',
@@ -177,28 +181,27 @@ class TeamPage extends Component {
               src={require('./images/right-arrow.svg')}></img>
               </h3> */}
             </div>
-            
-              <div className="tablet-centered">
-            <div
-              className="circle light"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <img
-                alt="team"
-                src={require('./images/team.jpeg')}
+
+            <div className="tablet-centered">
+              <div
+                className="circle light"
                 style={{
-                  height: '90%',
-                  width: '90%',
-                  objectFit: 'cover',
-                  borderRadius: '50%'
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
-              ></img>
-            </div>
-            
+              >
+                <img
+                  alt="team"
+                  src={require('./images/team.jpeg')}
+                  style={{
+                    height: '90%',
+                    width: '90%',
+                    objectFit: 'cover',
+                    borderRadius: '50%'
+                  }}
+                ></img>
+              </div>
             </div>
           </div>
         </section>
@@ -213,6 +216,19 @@ class TeamPage extends Component {
                 mail={member.mail}
               />
             ))}
+
+            <div className="call-to-action">
+              <h1>Want to join our team?</h1>
+              <p>
+                We have weekly team meetings to discuss research ideas and
+                future projects. Training encompasses research methodology and
+                team member provide their expertise in relation to both
+                quantitative and qualitative projects.
+              </p>
+
+              <Link to={'/contact'}>
+                <div className="button">Contact Us</div>
+              </Link>            </div>
           </div>
         </section>
       </div>

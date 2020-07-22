@@ -241,7 +241,23 @@ class Homepage extends Component {
             <h1>PHIRST Alumni</h1>
           </div>
           <Timeline />
+        <div className="container">
+          <div className="call-to-action">
+              <h1>Want to be next?</h1>
+              <p>
+                We have weekly team meetings to discuss research ideas and
+                future projects. Training encompasses research methodology and
+                team member provide their expertise in relation to both
+                quantitative and qualitative projects.
+              </p>
+
+              <Link to={'/contact'}>
+                <div className="button">Contact Us</div>
+              </Link>
+            </div>
+            </div>
         </section>
+          
       </div>
     )
   }

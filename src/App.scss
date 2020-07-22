@@ -555,6 +555,46 @@ footer{
   background-color: black;
 }
 
+// training page
+
+.testimonials{
+  // display: flex;
+  align-items: center ;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+//call to action
+
+.call-to-action{
+  text-align: center;
+  margin: 160px 0px 120px 0px;
+}
+
+.call-to-action h1{
+  margin: 0px 0px 60px 0px;
+}
+
+.call-to-action p{
+  text-align: left;
+  font-size: 18px;
+  margin: 60px 0px 40px 0px;
+}
+
+.call-to-action .button{
+  background-color: $secondary-color;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: $heading-font;
+  margin: 0px auto 0px auto;
+}
+
 // all pages
 
 .body-heading{
@@ -612,6 +652,10 @@ footer{
       }
     }
     @media (min-width : 992px) {
+      .testimonials{
+        display: flex;
+      }
+
       .mobile-nav{
         display: none;
       }
@@ -639,6 +683,7 @@ footer{
 
     /* Medium Devices, Desktops */
     @media (max-width : 992px) { 
+
       
       .tablet-padding-top-none{
         padding-top: 0px !important;
