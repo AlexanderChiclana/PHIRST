@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab941d4708a370d117820bba6db88e2b",
+    "revision": "9fee2f7460102460ca69f8381690d4d4",
     "url": "/index.html"
   },
   {
-    "revision": "9975640cc8ea4da06163",
+    "revision": "162e7e2742c860e1801e",
     "url": "/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "4c5f92db9623c0224807",
-    "url": "/static/css/main.cdb9007b.chunk.css"
+    "revision": "80aeeafd16552d3796ce",
+    "url": "/static/css/main.f2342b94.chunk.css"
   },
   {
-    "revision": "9975640cc8ea4da06163",
-    "url": "/static/js/2.20086ac0.chunk.js"
+    "revision": "162e7e2742c860e1801e",
+    "url": "/static/js/2.67822d23.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/static/js/2.20086ac0.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.67822d23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4c5f92db9623c0224807",
-    "url": "/static/js/main.f1d83214.chunk.js"
+    "revision": "80aeeafd16552d3796ce",
+    "url": "/static/js/main.61441f8d.chunk.js"
   },
   {
     "revision": "5ed6112ba875d2fb7861",
@@ -76,6 +76,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/brown-transparent.60c8d5d8.png"
   },
   {
+    "revision": "b4751ee3117416fd4a21a595553f49a6",
+    "url": "/static/media/brown_logo.b4751ee3.png"
+  },
+  {
     "revision": "40f9607a3a8d4aee3b25c055d95ae49a",
     "url": "/static/media/business-and-finance.40f9607a.png"
   },
@@ -86,6 +90,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6f4160861ad52d18641259f85ea9f704",
     "url": "/static/media/educational.6f416086.png"
+  },
+  {
+    "revision": "07afb6ba807d87b2e857a637bf79ad80",
+    "url": "/static/media/g-scholar.07afb6ba.png"
   },
   {
     "revision": "aaff58aa881b0a9d0d16d4a78cbebf16",
@@ -108,6 +116,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/olivia.c53ebe27.png"
   },
   {
+    "revision": "d6882239fb4d399606159fea91358a05",
+    "url": "/static/media/pafpi.d6882239.png"
+  },
+  {
     "revision": "b5bc00f18e58cc7e5c08aad40bb4a489",
     "url": "/static/media/philipine black.b5bc00f1.png"
   },
@@ -122,5 +134,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8cbd2ded0d3ec3e0fd3a67c34bcc7f2c",
     "url": "/static/media/team.8cbd2ded.jpeg"
+  },
+  {
+    "revision": "8610fbdbe69403dc1349d38c7794c495",
+    "url": "/static/media/white-interior.8610fbdb.svg"
   }
 ]);
