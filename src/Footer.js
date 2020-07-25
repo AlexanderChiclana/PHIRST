@@ -38,8 +38,11 @@ function Footer() {
         </div>
       </footer>
       <div className="base">
+     
        <p> © 2020  PHIRST all rights reserved</p>
+       <img alt="brown logo" style={{height: '70%', opacity: '.9'}} src={require("./images/white-interior.svg")}/>
 
+       <p>Developed by Alexander Chiclana</p>
         </div>
       
     </React.Fragment>

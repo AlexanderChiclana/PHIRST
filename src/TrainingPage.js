@@ -3,6 +3,7 @@ import Testimonial from './Testimonial.js'
 import Olivia from './images/olivia.png'
 import Maylin from './images/Maylin.jpg'
 import Irene from './images//Quilantang.jpg'
+import Jen from './images/Jennifer-Nazareno.jpg'
 import { Link } from 'react-router-dom'
 
 class TrainingPage extends Component {
@@ -80,23 +81,15 @@ class TrainingPage extends Component {
               />
 
               <Testimonial
-                name="Olivia Sisson"
-                photo={Olivia}
-                position="PHIRST Member"
-                quote="  I am very grateful to be part of PHIRST and working alongside with
-          other scholars and great mentors. This group has provided a space
-          where we can share our own work, ask for technical assistance, and
-          learn from each other, with the common goal of improving the health
-          and well-being of Filipinos and Filipino-Americans. The training
-          opportunities given to us and the chance to do our graduate programs
-          at the Brown University will definitely build our capacity to carry
-          out our research projects and improve our teaching strategies when we
-          return to our home country and university  "
+                name="Jennifer Nazareno"
+                photo={Jen}
+                position="PHIRST Co-Founder / Co-Director"
+                quote="  Don Operario has been training graduate students for over 25 years through grant writing, research methods, publications, and has constantly emphasized the importance of community partnerships in doing public health. Since we started working together in 2015, he has been very generous with his time, intellect and mentorship. I’m very proud to co-direct PHIRST with him "
               />
             </div>
 
             <div className="call-to-action">
-              <h1>Interested in our training?</h1>
+              <h1>Want to learn more about PHIRST?</h1>
               <p>
                 We have weekly team meetings to discuss research ideas and
                 future projects. Training encompasses research methodology and

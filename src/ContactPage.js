@@ -24,10 +24,10 @@ class ContactPage extends Component {
               <p>
                 We have weekly team meetings to discuss research ideas and
                 future projects. Training encompasses research methodology and
-                team member provide their expertise in relation to both
+                team members provide their expertise in relation to both
                 quantitative and qualitative projects. For inquiries about
-                training, please contact either Jennifer Nazareno or Don
-                Operario. For all other inquiries, please contact Alex Adia.
+                PHIRST, please contact either Don Operario, Jennifer Nazareno,
+                or Alex Adia.
               </p>
               <div className="contact-links">
                 <a href="mailto:jennifer_nazareno@brown.edu">

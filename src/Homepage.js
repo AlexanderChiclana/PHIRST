@@ -49,7 +49,7 @@ class Homepage extends Component {
               <p>
                 The Brown Philippine Health Initiative for Research, Service, &
                 Training is an effort by students and faculty at the Brown
-                School of Public Health to advance the health of people in the
+                School of Public Health to improve the health of people in the
                 Philippines and Filipino Americans. Though we are mostly focused
                 on doing so through the development of knowledge through
                 scholarship, we are committed to developing this knowledge
@@ -243,7 +243,7 @@ class Homepage extends Component {
           <Timeline />
         <div className="container">
           <div className="call-to-action">
-              <h1>Want to be next?</h1>
+              <h1>Want to learn more about PHIRST?</h1>
               <p>
                 We have weekly team meetings to discuss research ideas and
                 future projects. Training encompasses research methodology and

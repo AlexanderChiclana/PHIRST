@@ -3,7 +3,20 @@ import React, { Component } from 'react'
 const localData = {
   publications: [
     {
-      id: 2,
+      year: 2014,
+      title: "“Can I Ever Retire? Making a Case for the “Retireable Wage” of Immigrant Filipino Caregivers in Los Angeles. ",
+      authors: 'Nazareno, J., Parreñas, R., Fan, Y.K.',
+      url: 'https://irle.ucla.edu/old/publications/documents/CanIEverRetirePolicyReportIRLE.pdf',
+      journal: 'Institute for Research on Labor and Employment (IRLE), University of California, Los Angeles.  Report to the Pilipino Workers Center (PWC), Los Angeles.'
+    },
+    {
+      year: 2018,
+      title: 'Global dynamics of immigrant entrepreneurship: Changing trends, ethnonational variations, and reconceptualizations ',
+      authors: 'Jennifer Nazareno, Min Zhou, Tianlong You',
+      url:'https://www.researchgate.net/profile/Min_Zhou3/publication/327094154_Global_dynamics_of_immigrant_entrepreneurship_Changing_trends_ethnonational_variations_and_reconceptualizations/links/5c9cd39945851506d7305911/Global-dynamics-of-immigrant-entrepreneurship-Changing-trends-ethnonational-variations-and-reconceptualizations.pdf',
+      journal:'International Journal of Entrepreneurial Behavior & Research'
+    },
+    {
       year: 2020,
       title:
         'Sword and Shield: Perceptions of law in empowering and protecting HIV-positive men who have sex with men in Manila, Philippines.',
@@ -14,7 +27,6 @@ const localData = {
       journal: 'Global public health, 15(1), 52–63.'
     },
     {
-      id: 3,
       year: 2020,
       title:
         'Health Conditions, Outcomes, and Service Access Among Filipino, Vietnamese, Chinese, Japanese, and Korean Adults in California, 2011-2017',
@@ -25,7 +37,6 @@ const localData = {
         'Am J Public Health. 2020;110(4):520‐526. doi:10.2105/AJPH.2019.305523'
     },
     {
-      id: 4,
       year: 2020,
       title:
         'Barriers and facilitators to uptake of condoms among Filipinx transgender women and cisgender men who have sex with men: A situated socio-ecological perspective',
@@ -36,7 +47,6 @@ const localData = {
       journal: 'Global public health, 15(4), 520–531.'
     },
     {
-      id: 5,
       year: 2020,
       title:
         'Reimagining the Future of HIV Service Implementation in the Philippines Based on Lessons from COVID-19.',
@@ -46,7 +56,6 @@ const localData = {
       journal: 'AIDS and behavior, 1–3. Advance online publication.'
     },
     {
-      id: 6,
       year: 2019,
       title:
         'Prioritizing HIV Services for Transgender Women and Men Who Have Sex With Men in Manila, Philippines: An Opportunity for HIV Provider Interventions.',
@@ -58,7 +67,6 @@ const localData = {
         'The Journal of the Association of Nurses in AIDS Care : JANAC, 10.1097/JNC.0000000000000131. Advance online publication.'
     },
     {
-      id: 7,
       year: 2019,
       title:
         'Collective Coping Strategies for HIV-Related Challenges Among Men Who Have Sex With Men in Manila, Philippines.',
@@ -69,7 +77,6 @@ const localData = {
         'AIDS Educ Prev. 2019;31(5):479‐490. doi:10.1521/aeap.2019.31.5.479'
     },
     {
-      id: 8,
       year: 2019,
       title:
         'Collective Coping Strategies for HIV-Related Challenges Among Men Who Have Sex With Men in Manila, Philippines.',
@@ -81,7 +88,6 @@ const localData = {
         'AIDS education and prevention : official publication of the International Society for AIDS Education, 31(5), 479–490.'
     },
     {
-      id: 9,
       year: 2019,
       title:
         'Gender affirmative HIV care framework: Decisions on feminizing hormone therapy (FHT) and antiretroviral therapy (ART) among transgender women.',
@@ -92,7 +98,6 @@ const localData = {
       journal: 'PloS one, 14(10), e0224133.'
     },
     {
-      id: 10,
       year: 2019,
       title: 'The missing trans women of science, medicine, and global health.',
       authors: 'Restar AJ, Operario D.',
@@ -102,7 +107,6 @@ const localData = {
         'Lancet. 2019;393(10171):506‐508. doi:10.1016/S0140-6736(18)32423-1'
     },
     {
-      id: 11,
       year: 2018,
       title:
         '"An Evil Lurking Behind You": Drivers, Experiences, and Consequences of HIV-Related Stigma Among Men Who Have Sex With Men With HIV in Manila, Philippines.',
@@ -114,7 +118,6 @@ const localData = {
         'AIDS education and prevention : official publication of the International Society for AIDS Education, 30(4), 322–334.'
     },
     {
-      id: 12,
       year: 2018,
       title:
         'Welfare State Replacements: Deinstitutionalization, Privatization and the Outsourcing to Immigrant Women Enterprise.',
@@ -125,7 +128,6 @@ const localData = {
         'International journal of health services : planning, administration, evaluation, 48(2), 247–266.'
     },
     {
-      id: 13,
       year: 2018,
       title:
         'Trends and emerging directions in HIV risk and prevention research in the Philippines: A systematic review of the literature.',
@@ -136,7 +138,6 @@ const localData = {
       journal: 'PloS one, 13(12), e0207663. '
     },
     {
-      id: 14,
       year: 2016,
       title:
         '24-hour care: Work and sleep conditions of migrant Filipino live-in caregivers in Los Angeles.',
@@ -149,7 +150,7 @@ const localData = {
 }
 
 const Publication = props => {
-  const { id, year, title, authors, url, journal } = props
+  const { year, title, authors, url, journal } = props
   return (
     <div className="pub-row">
       <div className="pub-year">
@@ -189,7 +190,7 @@ class ResearchPage extends Component {
                 Our work in the Philippines mostly focuses on HIV and key
                 impacted communities like transgender women, cisgender men who
                 have sex with men, and young adults, while our work among
-                Filipino Americans mostly focuses on chronic health. PHIRST
+                Filipino Americans mostly focuses on chronic health conditions. PHIRST
                 research has been presented and recognized with awards at
                 national and international conferences, including the APHA
                 Annual Meeting and International AIDS Conference, and published
@@ -225,8 +226,8 @@ class ResearchPage extends Component {
               <h1>Publications</h1>
             </div>
             <div className="pub-list">
-            {localData.publications.map(publication => (
-              <Publication {...publication} key={publication.id} />
+            {localData.publications.sort((a,b) => b.year - a.year).map((publication, index) => (
+              <Publication {...publication} key={index} />
             ))}
             </div>
           </div>
