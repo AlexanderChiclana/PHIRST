@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 const localData = {
   publications: [
@@ -22,7 +23,7 @@ const localData = {
         'Sword and Shield: Perceptions of law in empowering and protecting HIV-positive men who have sex with men in Manila, Philippines.',
       authors:
         'Adia, A. C., Restar, A. J., Lee, C. J., Payawal, M. P., Quilantang, M. I., Nazareno, J., & Operario, D.',
-      url:
+      url: 
         'https://pubmed.ncbi.nlm.nih.gov/31134838/?from_term=alexander+adia&from_page=2&from_pos=3',
       journal: 'Global public health, 15(1), 52–63.'
     },
@@ -178,6 +179,28 @@ const Publication = props => {
 }
 
 class ResearchPage extends Component {
+
+  state = {
+    publications: []
+  }
+
+  getPublications = () => {
+    axios.get('https://cdn.contentful.com/spaces/fxjn6hn7ptqk/environments/master/entries?access_token=7Cp2qRcbgPNokFoPZjpxbZKyYewJdeCypE94i6Lm71Q&content_type=publication&order=-fields.year').then((res) => {
+      console.log(res)
+      this.setState({
+        publications: res.data.items
+      })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+
+  
+  componentDidMount(){
+    this.getPublications()
+  }
+
   render() {
     return (
       <div>
@@ -225,9 +248,9 @@ class ResearchPage extends Component {
             <div className="body-heading">
               <h1>Publications</h1>
             </div>
-            <div className="pub-list">
-            {localData.publications.sort((a,b) => b.year - a.year).map((publication, index) => (
-              <Publication {...publication} key={index} />
+            <div className="pub-list">  
+            {this.state.publications.map((publication, index) => (
+              <Publication {...publication.fields} key={index} />
             ))}
             </div>
           </div>

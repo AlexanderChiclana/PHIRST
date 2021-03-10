@@ -70,7 +70,6 @@ class Navbar extends Component {
     const { prevScrollpos, isOpen } = this.state
 
     const currentScrollPos = window.pageYOffset
-    console.log(isOpen)
 
     const visible =
       isOpen || prevScrollpos > currentScrollPos || currentScrollPos < 500
