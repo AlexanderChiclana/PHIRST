@@ -30,7 +30,6 @@ body{
 h1{
   font-weight: 400 !important;
   letter-spacing: $heading-spacing;
-  font-size: 40px;
 }
 
 h1, h2, h3, h4, h5, h6  {
@@ -42,6 +41,10 @@ h1, h2, h3, h4, h5, h6  {
 
 h3, h4, h5, h6{
   font-weight: 400 !important;
+}
+
+.jumbo{
+  font-size: 70px;
 }
 
 .light-font{
@@ -272,7 +275,7 @@ section{
 
 
 .initiatives-section{
-  min-height: 650px;
+  min-height: 800px;
   background-color: $secondary-color;
 }
 
@@ -562,6 +565,11 @@ footer{
   opacity: .5;
   font-size: 90%;
   margin: 0px 60px;
+  width: 400px;
+}
+
+footer h1{
+  font-size: 40px !important;
 }
 
 // training page
@@ -625,7 +633,7 @@ footer{
 
     /* Small Devices, Tablets */
     @media (min-width : 768px) {
-
+  
       .contact{
         display: flex;
         justify-content: space-between;
@@ -637,6 +645,14 @@ footer{
     /* Medium Devices, Desktops */
     @media (min-width : 992px) {
       // nav responsive
+      h1{
+        font-size: 70px !important;
+      }
+
+      .bio-container h1{
+        font-size: 50px !important;
+      }
+
       #menuToggle{
         display: none;
       }
@@ -664,6 +680,12 @@ footer{
     @media (min-width : 992px) {
       .testimonials{
         display: flex;
+      }
+      .highlight-link{
+        color: $light-color !important;
+      }
+      .highlight-background{
+        background-color: $secondary-color;
       }
 
       .mobile-nav{
@@ -694,7 +716,8 @@ footer{
     /* Medium Devices, Desktops */
     @media (max-width : 992px) { 
 
-      
+
+
       .tablet-padding-top-none{
         padding-top: 0px !important;
       }

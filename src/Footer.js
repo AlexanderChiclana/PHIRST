@@ -24,7 +24,7 @@ function Footer() {
       <footer>
         <div className='footer-container'>
         <Link to={'/'}>
-        <h1>PHIRST</h1>
+        <h1 style={{fontSize: '40px'}}>PHIRST</h1>
         </Link>
         
         <div className="footer-row">
@@ -42,7 +42,7 @@ function Footer() {
        <p> © 2020  PHIRST all rights reserved</p>
        <img alt="brown logo" style={{height: '70%', opacity: '.9'}} src={require("./images/white-interior.svg")}/>
 
-       <p>Developed by Alexander Chiclana</p>
+       <p>designed and developed by Alexander Chiclana</p>
         </div>
       
     </React.Fragment>

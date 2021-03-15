@@ -15,9 +15,20 @@ class NavbarLink extends Component {
       <div>
         <Link to={`/${route}`}>
           <div
-            className={
-              location.pathname.includes(route) ? 'route active' : 'route'
-            }
+            className={[
+              location.pathname.includes(route) ? 'route active' : 'route',
+              window.pageYOffset < 750 &&
+                location.pathname.includes(route) &&
+                !location.pathname.includes('contact') &&
+                'highlight-link'
+            ].join(' ')}
+            // style={{
+            //   color:
+            //     window.pageYOffset < 750 &&
+            //     location.pathname.includes(route) &&
+            //     !location.pathname.includes('contact') &&
+            //     '#F6F6F6'
+            // }}
           >
             {route}
           </div>
@@ -110,14 +121,25 @@ class Navbar extends Component {
     return (
       <React.Fragment>
         <div
-          className="navigation-bar"
+          className={[
+            'navigation-bar',
+            window.pageYOffset < 750 &&
+              this.props.location.pathname !== '/' &&
+              this.props.location.pathname !== '/contact' &&
+              'highlight-background'
+          ].join(" ")}
           style={{
             top: this.state.visible ? '0px' : '-140px',
-            transition: 'top 300ms, box-shadow 700ms',
+            transition: 'top 300ms, box-shadow 700ms, background-color 400ms',
             boxShadow:
               this.state.topPage || this.state.isOpen
                 ? 'none'
-                : '0 2px 4px -1px rgba(0,0,0,0.2)'
+                : '0 2px 4px -1px rgba(0,0,0,0.2)',
+            // backgroundColor:
+            //   window.pageYOffset < 750 &&
+            //   this.props.location.pathname !== '/' &&
+            //   this.props.location.pathname !== '/contact' &&
+            //   ' #FFB401'
           }}
         >
           <div
@@ -159,15 +181,14 @@ class Navbar extends Component {
         >
           <div className="mobile-navigation-routes">
             <div>
-              
-            {this.props.location.pathname !== '/' && (
-              <div>
-                <Link to={`/`}>
-                  <div className="route">home</div>
-                </Link>
-              </div>
-            )}
-            
+              {this.props.location.pathname !== '/' && (
+                <div>
+                  <Link to={`/`}>
+                    <div className="route">home</div>
+                  </Link>
+                </div>
+              )}
+
               <NavbarLink location={this.props.location} route="research" />
               <NavbarLink location={this.props.location} route="service" />
               <NavbarLink location={this.props.location} route="training" />
